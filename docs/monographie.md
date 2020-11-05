@@ -17,10 +17,12 @@ consigne: http://prodageo.insa-rouen.fr/casimono/sujetprojmd/consignes.html
 
 ### A0 : Introduction.
 
-L'objectif de ce projet est de créer une application web A permettant à des anciens ASI répartis sur plusieurs sites distants de passer en revue une liste de tâches, pour organiser une manifestation comme la journée des métiers. \\
+La technologie que nous allons étudier dans ce projet est celle du **web temps réel**. En effet, de nombreuses applications utilisent aujourd'hui cette technique pour mettre à jour un écran sans qu'aucune interaction utilisateur ne l'ait demandé.
 
-Le cas d'utilisation est le suivant :
-"Un utilisateur maitre M0 se connecte à l’application web A depuis un navigateur 1 et visualise une liste de tâches (vide). Il saisit 3 tâches T1, T2, T3. L’utilisateur M démarre la conférence Deux utilisateurs observateurs O1 et O2 se connectent à l’application web A depuis un navigateur 2 et 3. Ils visualisent la liste des tâches. L’utilisateur M surligne la tâche T1 Les deux utilisateurs O1 et O2 voient la ligne surlignées sans qu’il n’ait effectué aucune intervention. O1 saisit un commentaire Les deux autres utilisateurs M0 et O2 voient le commentaire."
+L'objectif de ce projet est de créer une application web permettant à des anciens ASI répartis sur plusieurs sites distants de passer en revue une liste de tâches, pour organiser une manifestation comme la journée des métiers.
+
+*Le cas d'utilisation est le suivant :*
+Un utilisateur maitre M0 se connecte à l’application web A depuis un navigateur 1 et visualise une liste de tâches (vide). Il saisit 3 tâches T1, T2, T3. L’utilisateur M démarre la conférence Deux utilisateurs observateurs O1 et O2 se connectent à l’application web A depuis un navigateur 2 et 3. Ils visualisent la liste des tâches. L’utilisateur M surligne la tâche T1 Les deux utilisateurs O1 et O2 voient la ligne surlignées sans qu’il n’ait effectué aucune intervention. O1 saisit un commentaire Les deux autres utilisateurs M0 et O2 voient le commentaire.
 
 ### A1. Glossaire et Mots-clés.
 
@@ -66,6 +68,8 @@ Le W3C a contribué au développement en 2011 de WebRTC (Web Real-Time Communica
 
 L'Internet Engineering Task Force (IETF) est un organisme de normalisation à but non lucratif, fondé en 1986. L'objectif de cette organisation est d'élaborer et de promouvoir des standards internet.
 
+XMPP (Extensible Messaging and Presence Protocol) est un ensemble de protocoles standards de l'IETF, très utilisé pour le web temps réel.
+
 L'IETF a également contribué au développement de WebRTC. Leur livre blanc sur les technologies Web en temps réel s'intitule [Web Real-Time Communcation Use Cases and Requirements](https://www.rfc-editor.org/info/rfc7478), est a été co-écrit par C. Holmberg, S. Hakansson et G. Eriksson.
 
 ### A5. Facteurs qualité
@@ -96,6 +100,8 @@ L'IETF a également contribué au développement de WebRTC. Leur livre blanc sur
 **Ajax-Reverse** :
 
 Ce concept a été introduit par Alex Russel et Joe Walker. Il s'agit d'un mode de fonctionnement où le serveur remonte de l'information au client (et non l'inverse), sans que celui-ci ne l'ait demandé explicitement. Il repose sur le mécanisme du long-polling : La requête HTTP peut rester en attente (d'un évenement, d'un timeout), dans quel cas elle se clot.
+
+![Ajax-Reverse](https://www.ibm.com/developerworks/library/wa-reverseajax1/fig01.gif)
 
 ## Partie B
 
