@@ -1,7 +1,7 @@
 ---
 consigne: http://prodageo.insa-rouen.fr/casimono/sujetprojmd/consignes.html
 ---
-# Monographie - {Web temps réel}
+# Monographie - Web temps réel
 
 ## Cartouche
 
