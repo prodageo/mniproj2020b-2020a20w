@@ -1,12 +1,12 @@
 ---
 consigne: http://prodageo.insa-rouen.fr/casimono/sujetprojmd/consignes.html
 ---
-# Monographie - {TITRE DU SUJET}
+# Monographie - {Web temps réel}
 
 ## Cartouche
 
  - Code du sujet : 20W 
- - Code de l'alliance : 2019A20W
+ - Code de l'alliance : 2020A20W
  - Liste des équipes
    - E03
      - Boulier, Florent (FloBouboule)
@@ -17,12 +17,20 @@ consigne: http://prodageo.insa-rouen.fr/casimono/sujetprojmd/consignes.html
 
 ### A0 : Introduction.
 
-La technologie que nous allons étudier dans ce projet est celle du **web temps réel**. En effet, de nombreuses applications utilisent aujourd'hui cette technique pour mettre à jour un écran sans qu'aucune interaction utilisateur ne l'ait demandé.
+La technique que nous allons étudier dans ce projet est celle du **web temps réel**. En effet, de nombreuses applications utilisent aujourd'hui cette technique pour mettre à jour un écran sans qu'aucune interaction utilisateur ne l'ait demandé.
 
 L'objectif de ce projet est de créer une application web permettant à des anciens ASI répartis sur plusieurs sites distants de passer en revue une liste de tâches, pour organiser une manifestation comme la journée des métiers.
 
 *Le cas d'utilisation est le suivant :*
-Un utilisateur maitre M0 se connecte à l’application web A depuis un navigateur 1 et visualise une liste de tâches (vide). Il saisit 3 tâches T1, T2, T3. L’utilisateur M démarre la conférence Deux utilisateurs observateurs O1 et O2 se connectent à l’application web A depuis un navigateur 2 et 3. Ils visualisent la liste des tâches. L’utilisateur M surligne la tâche T1 Les deux utilisateurs O1 et O2 voient la ligne surlignées sans qu’il n’ait effectué aucune intervention. O1 saisit un commentaire Les deux autres utilisateurs M0 et O2 voient le commentaire.
+Un utilisateur maître M0 se connecte à l’application web A depuis un navigateur 1 et visualise une liste de tâches (vide).
+Il saisit 3 tâches T1, T2, T3.
+L’utilisateur M démarre la conférence.
+Deux utilisateurs observateurs O1 et O2 se connectent à l’application web A depuis les navigateurs 2 et 3.
+Ils visualisent la liste des tâches.
+L’utilisateur M surligne la tâche T1.
+Les deux utilisateurs O1 et O2 voient la ligne surlignée sans qu’ils n’aient effectué aucune intervention.
+O1 saisit un commentaire.
+Les deux autres utilisateurs M0 et O2 voient le commentaire.
 
 ### A1. Glossaire et Mots-clés.
 
@@ -54,15 +62,15 @@ Un utilisateur maitre M0 se connecte à l’application web A depuis un navigate
 
 * **Google** :
 
-Google LLC est une entreprise américaine de services technologiques fondée en 1998 en Californie, par Larry Page et Sergey Brin. Les services qu'elle propose sont nombreux : courrier éléctronique, moteur de recherche, publicité en ligne, cloud, édition et collaboration (Google Docs, Sheets, Slides).
+Google LLC est une entreprise américaine de services technologiques fondée en 1998 en Californie, par Larry Page et Sergey Brin. Les services qu'elle propose sont nombreux : courrier électronique, moteur de recherche, publicité en ligne, cloud, édition et collaboration (Google Docs, Sheets, Slides).
 
-En 2009, Google a annoncé le lancement d'une fonction de recherche en temps réel. Cette fonction sert à chercher les termes entrés par l'utilisateur sur les pages Twitter, Facebook et MySpace. Les résultats sont classés par pertinence (nombre d'amis si il s'agit d'un compte Facebook, nombre de retweet pour Twitter).
+En 2009, Google a annoncé le lancement d'une fonction de recherche en temps réel. Cette fonction sert à chercher les termes entrés par l'utilisateur sur les pages Twitter, Facebook et MySpace. Les résultats sont classés par pertinence (nombre d'amis s'il s'agit d'un compte Facebook, nombre de retweets pour Twitter).
 
 * **World Wide Web Consortium** :
 
-Le World Wide Web Consortium, W3C, est un organisme de standardisation à but non lucratif, fondé en 1994. Il a pour objectif de proumouvoir la compatibilité des technologies Web (HTML, XML, CSS, SVG...).
+Le World Wide Web Consortium, W3C, est un organisme de standardisation à but non lucratif, fondé en 1994. Il a pour objectif de promouvoir la compatibilité des technologies Web (HTML, XML, CSS, SVG...).
 
-Le W3C a contribué au développement en 2011 de WebRTC (Web Real-Time Communication), une interface de programmation JavaScript qiu permet la communcation en temps réel. Elle permet notamment le partage de fichiers en peer-to-peer.
+Le W3C a contribué au développement en 2011 de WebRTC (Web Real-Time Communication), une interface de programmation JavaScript qui permet la communication en temps réel. Elle permet notamment le partage de fichiers en peer-to-peer.
 
 * **Internet Engineering Task Force** :
 
@@ -97,11 +105,17 @@ L'IETF a également contribué au développement de WebRTC. Leur livre blanc sur
 
 ### A7. Références théoriques
 
-**Ajax-Reverse** :
+**Ajax-Reverse** [(IBM)](https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html) :
 
 Ce concept a été introduit par Alex Russel et Joe Walker. Il s'agit d'un mode de fonctionnement où le serveur remonte de l'information au client (et non l'inverse), sans que celui-ci ne l'ait demandé explicitement. Il repose sur le mécanisme du long-polling : La requête HTTP peut rester en attente (d'un évenement, d'un timeout), dans quel cas elle se clot.
 
 ![Ajax-Reverse](https://www.ibm.com/developerworks/library/wa-reverseajax1/fig01.gif)
+
+**WebSockets** [(mozilla)](https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API)
+
+**XMPP** [(xmpp)](https://xmpp.org/about/technology-overview.html)
+
+**PubSubHubbub** [(programmableweb)](https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03)
 
 ## Partie B
 
