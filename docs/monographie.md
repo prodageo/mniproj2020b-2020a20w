@@ -17,7 +17,14 @@ consigne: http://prodageo.insa-rouen.fr/casimono/sujetprojmd/consignes.html
 
 ### A0 : Introduction.
 
-La technique que nous allons étudier dans ce projet est celle du **web temps réel**. En effet, de nombreuses applications utilisent aujourd'hui cette technique pour mettre à jour un écran sans qu'aucune interaction utilisateur ne l'ait demandé.
+La technologie que nous allons étudier dans ce projet est celle du **web temps réel**. En effet, de nombreuses applications utilisent aujourd'hui cette technologie pour mettre à jour un écran sans qu'aucune interaction utilisateur ne l'ait demandé. Grâce à cette technologie, l'internaute n'est plus en attente d'information, il la reçoit lorsqu'elle est disponible. Cela permet notamment le travail collaboratif en temps réel et permet une meilleure interaction avec l'utilisateur.
+
+Les informations reçues par l'utilisateur peuvent être diverses : Des messages courts, des messages de type "alerte", des liens... On peut par exemple citer les statuts Facebook, les recherches Google ou les tweets.
+
+Il existe aujourd'hui plusieurs techniques pour implémenter du web en temps réel : Le pattern ajax-reverse, explicité dans la partie A7 réferences théoriques, mais également le HTML5, les WebSockets, XMPP ou encore PubSubHubbub.
+- HTML5 est un standard des technologies web, qui apporte des API et des protocoles permettant d'implémenter le web temps réel. Les WebSockets sont un exemple de ces fonctionnalités : Ils permettent une communication bidirectionnelle entre le serveur et le client. 
+- XMPP est un ensemble de procotoles standards pour la messagerie instantanée.
+- PubSubHubbub est un protocole ouvert qui fournit une notification en temps réel des mises à jour.
 
 L'objectif de ce projet est de créer une application web permettant à des anciens ASI répartis sur plusieurs sites distants de passer en revue une liste de tâches, pour organiser une manifestation comme la journée des métiers.
 
@@ -34,29 +41,45 @@ Les deux autres utilisateurs M0 et O2 voient le commentaire.
 
 ### A1. Glossaire et Mots-clés.
 
-* **Web**
-* **Temps réel**
-* **Interaction utilisateur**
-* **Navigateur**
-* **Rafraîchissement**
-* **Liste de tâches**
-* **ajax-reverse**
-* **WebSockets**
-* **XMPP**
-* **PubSubHubbub**
+* **Application Web** : Une application hébérgée sur un serveur et accessible via un navigateur Web. Elle ne nécessite pas d'installation sur la machine cliente.
+* **Temps réel** : En direct, au moment où les choses se passent.
+* **Interaction utilisateur** : Action réciproque entre l'utilisateur et le système (ici une page web).
+* **Navigateur** : Logiciel conçu pour naviguer sur le Web.
+* **Rafraîchissement** : Fait d'actualiser/de recharger une page web pour avoir sa version la plus récente.
+* **Liste de tâches** : Outil de gestion de temps permettant de donner une priorité aux tâches à faire.
+* **ajax-reverse** : Pattern explicité en A7
+* **WebSockets** : voir A0
+* **XMPP** : voir A0
+* **PubSubHubbub** : voir A0
 
 ### A2. Webographie
 
-* [WebSockets](https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API)
-* [XMPP Overview](https://xmpp.org/about/technology-overview.html)
-* [What is PubSubHubbub and how does it work?](https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03)
-* [Reverse-Ajax](https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html)
+* WebSockets :
+  + https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API
+  + Dernière consultation le 27/11/2020
+  + Documentation complète sur la technologie des WebSockets et présentation d'outils permettant d'implémenter des WebSockets.
+* XMPP Overview : https://xmpp.org/about/technology-overview.html
+* What is PubSubHubbub and how does it work? :
+  + https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03
+  + Dernière consultation le 27/11/2020
+  + Présentation du protocole PubSubHubbub et explication de son fonctionnement.
+* Reverse-Ajax :
+  + https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html
+  + Dernière consultation le 27/11/2020
+  + Présentation d'Ajax, du Reverse Ajax (Comet) et des WebSockets. Explication des différentes techniques permettant de mettre en place le Reverse Ajax.
 
 ### A3. Bibliographie
 
-* **Comet and Reverse Ajax**, Dennis McCarthy, Chris Crane, *What are Comet and Reverse Ajax?* (p.1-9), *Simple Ways to achieve Push* (p.11-31)
-* **Ajax Patterns and Best Practices**, Christian Gross, *Persistent Communications Pattern* (p.225-263)
-* **Ajax: The Complete Reference**, Thomas A. Powell, *Networking considerations* (p.231-381)
+* **Comet and Reverse Ajax**, Phil McCarthy, Dave Crane, 2009, Apress
+  + *What are Comet and Reverse Ajax?* (p.1-9) : Présentation de Comet et Reverse Ajax.
+  + *Simple Ways to achieve Push* (p.11-31) : Possibilité autres que Comet pour mettre en place Push.
+  + *Comet the Easy Way* (p.53-70) : Mettre en place simplement Comet avec des outils tels que Direct Web Remoting.
+* **Ajax Patterns and Best Practices**, Christian Gross, 2006, Apress
+  + Christian Gross est un ancien consultant pour Microsoft avec une très grande expérience sur les architectures client/serveur.
+  + *Persistent Communications Pattern* (p.225-263) : Explication du mécanisme permettant une communication bidirectionnelle.
+* **Ajax: The Complete Reference**, Thomas A. Powell, 2008, McGraw-Hill Osborne
+  + Thomas A. Powell est impliqué dans la communauté internet depuis 1987. En 1994, il crée son entreprise, spécialisée dans le Web design et Web development.
+  + *Networking considerations* (p.231-381) : Présentation de difficultés quant à l'utilisation d'Ajax et solutions possibles.
 
 ### A4. Acteurs
 
@@ -105,7 +128,8 @@ L'IETF a également contribué au développement de WebRTC. Leur livre blanc sur
 
 ### A7. Références théoriques
 
-**Ajax-Reverse** [(IBM)](https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html) :
+**Ajax-Reverse** (IBM) :
+https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html
 
 Ce concept a été introduit par Alex Russel et Joe Walker. Il s'agit d'un mode de fonctionnement où le serveur remonte de l'information au client (et non l'inverse), sans que celui-ci ne l'ait demandé explicitement. Il repose sur le mécanisme du long-polling : La requête HTTP peut rester en attente (d'un évenement, d'un timeout), dans quel cas elle se clot.
 
