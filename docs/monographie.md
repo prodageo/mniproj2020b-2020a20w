@@ -188,6 +188,22 @@ XMPP est un ensemble de technologies pour la messagerie instantanée, entres aut
 
 **BOSH** est une technologie permettant une communication bidirectionnelle en utilisant le protocole HTTP. Elle utilise beaucoup moins de bande-passante et est beaucoup plus réactive que la plupart des autres protocoles de transport bidirectionnel basé sur le HTTP et que les techniques AJAX. Cet avantage est obtenu en évitant le polling HTTP qui consiste à envoyer des requêtes en permanence au serveur et qui entraîne de nombreuses réponses vides. Au contraire, BOSH simule une connexion TCP de longue durée en utilisant une séquence de requête/réponse HTTP, où la requête est mise en attente par le serveur jusqu'à ce que les données arrivent et soient renvoyées dans la réponse. Une fois la réponse reçue par le client, ce dernier renvoie immédiatement une nouvelle requête afin de continuer la boucle. XMPP utilise en grande majorité cette technologie, mais BOSH peut être utilisé à d'autres fins.
 
+#### PubSubHubbub
+
+PubSubHubbub est une technologie permettant d'envoyer de l'information au client, sans que celui-ci envoie une requête la demandant. Pour ce faire, le système est composé de 3 éléments : un publicateur, un abonné, et un hub.
+
+- Le **publicateur** est l'entité qui possède l'information, et qui la transmet.
+- L'**abonné** est l'entité interessée par l'information du publicateur.
+- Le **hub** est l'entité qui récupère les informations proposées par les publicateurs, et qui se charge de les redistribuer aux abonnés interessés.
+
+Afin de gérer les différentes informations, PubSubHubbub fonctionne grâce à un système de topics.
+Chaque publicateur propose une liste de topics concernant les différentes informations qu'il met à disposition.
+Chaque client peut demander aux publicateurs les topics qu'ils proposent, puis demander au hub de s'abonner aux topics qui les intéressent.
+
+Un topic est représenté par une URL du hub. Afin de recevoir les informations, les clients doivent disposer d'un serveur accessible par le web et indiquer au hub l'endpoint qui doit recevoir l'information d'un topic.
+
+PubSubHubbub propose également un système de challenge, qui permet d'éviter les abonnements non désirés, en demandant une confirmation de la part du client.
+
 ### B2. Solutions technologiques concurrentes
 
 #### WebSockets
