@@ -26,7 +26,7 @@ Il existe aujourd'hui plusieurs techniques pour implémenter du web en temps ré
 - XMPP est un ensemble de procotoles standards pour la messagerie instantanée.
 - PubSubHubbub est un protocole ouvert qui fournit une notification en temps réel des mises à jour.
 
-Cette alliance ne comprenant qu'une équipe, l'objectif de ce projet est d'utiliser l'une des techniques mentionnées précédemment pour développer cette application, et de mesurer les indicateurs choisis. Pour ce faire, l'équipe appliquera la technologie sur une application web permettant à des anciens ASI répartis sur plusieurs sites distants de passer en revue une liste de tâches, pour organiser une manifestation comme la journée des métiers. 
+L'objectif de ce projet est d'étudier les 3 techniques proposées puis de les comparer en mesurant certains indicateurs. Cette alliance ne comprenant qu'une équipe, une seule technique sera choisie puis mesurée. Pour ce faire, l'équipe appliquera la technique sur une application web permettant à des anciens ASI répartis sur plusieurs sites distants de passer en revue une liste de tâches, pour organiser une manifestation comme la journée des métiers.
 
 *Le cas d'utilisation est le suivant :*
 
