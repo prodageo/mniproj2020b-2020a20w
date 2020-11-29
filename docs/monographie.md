@@ -1,6 +1,11 @@
+layout: page
+title: "Monographie - Web temps réel"
+permalink: /monographie.md/
+
 ---
 Consignes : http://prodageo.insa-rouen.fr/casimono/sujetprojmd/consignes.html
 ---
+
 # Monographie - Web temps réel
 
 ## Cartouche
