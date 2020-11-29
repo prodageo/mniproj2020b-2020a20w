@@ -26,7 +26,7 @@ La technologie que nous allons étudier dans ce projet est celle du **web temps 
 
 Les informations reçues par l'utilisateur peuvent être diverses : Des messages courts, des messages de type "alerte", des liens... On peut par exemple citer les statuts Facebook, les recherches Google ou les tweets.
 
-Il existe aujourd'hui plusieurs techniques pour implémenter du web en temps réel : Le pattern ajax-reverse, explicité dans la partie A7 réferences théoriques, mais également le HTML5, les WebSockets, XMPP ou encore PubSubHubbub.
+Il existe aujourd'hui plusieurs techniques pour implémenter du web en temps réel : Le pattern ajax-reverse, explicité dans la partie A7 réferences théoriques, mais également les WebSockets de HTML5, XMPP ou encore PubSubHubbub.
 - HTML5 est un standard des technologies web, qui apporte des API et des protocoles permettant d'implémenter le web temps réel. Les WebSockets sont un exemple de ces fonctionnalités : Ils permettent une communication bidirectionnelle entre le serveur et le client. 
 - XMPP est un ensemble de procotoles standards pour la messagerie instantanée.
 - PubSubHubbub est un protocole ouvert qui fournit une notification en temps réel des mises à jour.
