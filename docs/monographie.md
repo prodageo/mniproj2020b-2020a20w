@@ -153,7 +153,83 @@ Ce concept a été introduit par Alex Russel et Joe Walker. Il s'agit d'un mode 
 
 ### B1. Approche technique
 
+#### WebSockets
+
+Le WebSocket est une technologie qui permet d'ouvrir un canal de communication bidirectionnelle entre un navigateur (côté client) et un serveur. Avec elle, il est possible d'envoyer des messages à un serveur et recevoir ses réponses de manière événementielle, sans avoir à consulter le serveur pour obtenir une réponse. Les connexions WebSockets sont similaires aux sockets Unix, mais ce sont bien deux entités distinctes. Il existe des connexions sécurisées `wss://` ou non `ws://`.
+
+Côté client, la technique est composée de 3 éléments :
+- Le WebSocket en lui-même, qui est l'interface principale pour se connecter à un serveur WebSocket. Il permet d'envoyer et de recevoir des données sur la connexion ;
+- Le CloseEvent qui est l'événement envoyé par l'objet WebSocket lors de la fermeture de la connexion ;
+- Le MessageEvent qui est l'événement envoyé par l'objet WebSocket lorsqu'un message en provenance du serveur est reçu.
+
+**WebSocket :** possède 3 méthodes :
+- une méthode permettant de créer la connexion ;
+- une méthode permettant d'envoyer des données sur la connexion ;
+- une méthode permettant de mettre fin à la connexion.
+
+Généralement, c'est une chaîne de caractères sous le format JSON qui est envoyée, encodée au format UTF-8, mais il est possible de définir un sous-protocole partagé par les deux partis qui défini le format des données envoyées, qu'elles soient des chaînes de caractères ou non.
+
+Les bonnes pratiques veulent que l'utilisation des WebSockets soit faite dans des Web Workers, c'est à dire des threads en tâches de fond, car le thread principal est celui de l'interface utilisateur. Les threads s'échangent des informations grâce à un système de messages.
+
+Un serveur WebSocket doit être écrit dans un langage de programmation capable de gérer les Berkeley sockets.
+
+#### XMPP
+
+**PubSub :** Observer design pattern / Publish-Subscribe design pattern
+
 ### B2. Solutions technologiques concurrentes
+
+#### WebSockets
+
+TODO : Étudier cette liste
+
+- HumbleNet: A cross-platform networking library that works in the browser. It consists of a C wrapper around WebSockets and WebRTC that abstracts away cross-browser differences, facilitating the creation of multi-user networking functionality for games and other apps.
+- µWebSockets: Highly scalable WebSocket server and client implementation for C++11 and Node.js.
+- ClusterWS: Lightweight, fast and powerful framework for building scalable WebSocket applications in Node.js.
+- CWS: Fast C++ WebSocket implementation for Node.js (uWebSockets v0.14 fork)
+- Socket.IO: A long polling/WebSocket based third party transfer protocol for Node.js.
+- SocketCluster: A pub/sub WebSocket framework for Node.js with a focus on scalability.
+- WebSocket-Node: A WebSocket server API implementation for Node.js.
+- Total.js: Web application framework for Node.js (Example: WebSocket chat)
+- Faye: A WebSocket (two-ways connections) and EventSource (one-way connections) for Node.js Server and Client.
+- SignalR: SignalR will use WebSockets under the covers when it's available, and gracefully fallback to other techniques and technologies when it isn't, while your application code stays the same.
+- Caddy: A web server capable of proxying arbitrary commands (stdin/stdout) as a websocket.
+- ws: a popular WebSocket client & server library for Node.js.
+- jsonrpc-bidirectional: Asynchronous RPC which, on a single connection, may have functions exported on the server and, and the same time, on the client (client may call server, server may also call client).
+- cowboy: Cowboy is a small, fast and modern HTTP server for Erlang/OTP with WebSocket support.
+
+#### XMPP
+
+TODO : Étudier ces listes
+
+**Core :**
+- aioxmpp : Python
+- Erlang/Elixir XMPP : Elixir / Erlang
+- libstrophe : C
+- MatriX : .net / C# / Mono
+- MatriX vNext : .NET Core / .NET Standard / C#
+- Mellium : Go
+- python-nbxmpp : Python
+- QXmpp : C++
+- Slixmpp : Python
+- StanzaJS : JavaScript
+- Stroke : Java
+- Strophe.js : JavaScript
+- Swiften: C++
+- Tigase JaXMPP : Android / Google Web Toolkit / Java
+- Tigase Martin : Swift
+- Verse : Lua
+- Waher Networking : .NET Core / .NET Standard / C#
+
+**Jingle :**
+- libjingle (C/C++)
+- Smack (Java)
+- Telepathy Gabble (C)
+- yjingle (C++)
+
+**PubSub :**
+- strophe (C or JavaScript)
+- XMPP4R (Ruby)
 
 ### B3. Solutions retenues
 
