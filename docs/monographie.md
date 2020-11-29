@@ -106,7 +106,7 @@ L'IETF a également contribué au développement de WebRTC. Leur livre blanc sur
 ### A5. Facteurs qualité
 
 * Efficacité d'exécution : une application conçue pour fonctionner en temps réel doit bien évidemment avoir une efficacité d'exécution irréprochable. Dans le cas contraire, on perdrait l'aspect temps réel.
-* Indépendance machine : une technologie web doit être indépendante de l'envirronement matériel car elle peut être utilisée dans pleins d'envirronements différents.
+* Indépendance machine : une technologie web doit être indépendante de l'environnement matériel car elle peut être utilisée dans plein d'environnements différents. L'environnement peut être différent à cause du système d'exploitation (ex : Windows/macOS), du navigateur (ex : Firefox/Opera), de l'appareil (ex : PC/Smartphone) et/ou de l'architecture (ex : x86_64/ARM64).
 * Efficacité de stockage : une efficacité de stockage dans une application web implique une efficacité dans les ressources envoyées et reçues par les serveurs et donc une économie de bande passante et une meilleure vitesse de chargement de l'application. On retrouve des aspects nécessaires à une application temps réel.
 
 ### A6. Indicateurs qualité
