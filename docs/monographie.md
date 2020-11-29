@@ -1,5 +1,5 @@
 ---
-consigne: http://prodageo.insa-rouen.fr/casimono/sujetprojmd/consignes.html
+Consignes : http://prodageo.insa-rouen.fr/casimono/sujetprojmd/consignes.html
 ---
 # Monographie - Web temps réel
 
@@ -26,18 +26,21 @@ Il existe aujourd'hui plusieurs techniques pour implémenter du web en temps ré
 - XMPP est un ensemble de procotoles standards pour la messagerie instantanée.
 - PubSubHubbub est un protocole ouvert qui fournit une notification en temps réel des mises à jour.
 
-L'objectif de ce projet est de créer une application web permettant à des anciens ASI répartis sur plusieurs sites distants de passer en revue une liste de tâches, pour organiser une manifestation comme la journée des métiers.
+Cette alliance ne comprenant qu'une équipe, l'objectif de ce projet est d'utiliser l'une des techniques mentionnées précédemment pour développer cette application, et de mesurer les indicateurs choisis. Pour ce faire, l'équipe appliquera la technologie sur une application web permettant à des anciens ASI répartis sur plusieurs sites distants de passer en revue une liste de tâches, pour organiser une manifestation comme la journée des métiers. 
 
 *Le cas d'utilisation est le suivant :*
-Un utilisateur maître M0 se connecte à l’application web A depuis un navigateur 1 et visualise une liste de tâches (vide).
-Il saisit 3 tâches T1, T2, T3.
-L’utilisateur M démarre la conférence.
-Deux utilisateurs observateurs O1 et O2 se connectent à l’application web A depuis les navigateurs 2 et 3.
-Ils visualisent la liste des tâches.
-L’utilisateur M surligne la tâche T1.
-Les deux utilisateurs O1 et O2 voient la ligne surlignée sans qu’ils n’aient effectué aucune intervention.
-O1 saisit un commentaire.
-Les deux autres utilisateurs M0 et O2 voient le commentaire.
+
+```
+> Un utilisateur maître M0 se connecte à l'application web A depuis un navigateur 1 et visualise une liste de tâches (vide).
+> Il saisit 3 tâches T1, T2, T3.
+> L'utilisateur M démarre la conférence.
+> Deux utilisateurs observateurs O1 et O2 se connectent à l'application web A depuis les navigateurs 2 et 3.
+> Ils visualisent la liste des tâches.
+> L'utilisateur M surligne la tâche T1.
+> Les deux utilisateurs O1 et O2 voient la ligne surlignée sans qu'ils n'aient effectué aucune intervention.
+> O1 saisit un commentaire.
+> Les deux autres utilisateurs M0 et O2 voient le commentaire.
+```
 
 ### A1. Glossaire et Mots-clés.
 
