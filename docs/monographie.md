@@ -170,7 +170,23 @@ Un serveur WebSocket doit être écrit dans un langage de programmation capable 
 
 #### XMPP
 
-**PubSub :** Observer design pattern / Publish-Subscribe design pattern
+XMPP est un ensemble de technologies pour la messagerie instantanée, entres autres, et de manière générale pour la diffusion de données XML. Les technologies clés sont "Core", "Jingle", "Multi-User Chat", "PubSub" et "BOSH".
+
+- **Core** est, comme son nom l'indique, la technologie au cœur de XMPP, c'est elle qui permet de transmettre des données sous format XML.
+- **Jingle** est la technologie permettant de diffuser de la voix, des vidéos, des fichiers et d'autres applications.
+- **Multi-User Chat (MUC)** est une extension de Core pour faciliter la communication entre plusieurs clients.
+- **PubSub** est une technologie basée sur le design pattern Observer ou Publish-Subscribe, d'où son nom.
+- **BOSH** signifie "Bidirectional-streams Over Synchronous HTTP". Elle permet une connexion bidirectionnelle en utilisant le protocole HTTP.
+
+**Core** définit les méthodes au cœur du protocole. XMPP fonctionne grâce à un réseau distribué de clients et de serveurs communiquant avec des streams XML à travers des connexions TCP. Chaque client possède une adresse de type `identifiant@adresse.serveur`, et chaque serveur possède une adresse de type `adresse.serveur` (ex : `alice@insa-rouen.fr` et `insa-rouen.fr`). Lorsqu'un client A veut envoyer un message à un client B, le client A se connecte au serveur de son domaine et lui transmet le message. Ce serveur va ensuite le faire transiter jusqu'au serveur du domaine du client B qui le stockera. Lorsque le client B se connectera au serveur de son domaine, il recevra le message.
+
+**Jingle** permet à deux clients XMPP de gérer des sessions pair-à-pair, afin de se transférer des fichiers ou d'établir des flux temps-réel d'audio et/ou de vidéo, pouvant utiliser des canaux TCP ou UDP.
+
+**Multi-User Chat (MUC)** étend le cœur du protocole pour permettre la création et la modération de salons composés de plusieurs utilisateurs. Ainsi, un client A peut envoyer un message au salon composé des clients A, B et C, et lorsque les clients B et C se connecteront au salon, ils recevront le message.
+
+**PubSub** étend le cœur du protocole pour permettre aux clients de s'inscrire à des nœuds, et du publier des données sur ces nœuds. Ainsi, les clients A et B peuvent s'inscrire à un nœud, et lorsque le client A publiera un message sur celui-ci, le client B le recevra quand il se connectera au serveur gérant ce nœud.
+
+**BOSH** est une technologie permettant une communication bidirectionnelle en utilisant le protocole HTTP. Elle utilise beaucoup moins de bande-passante et est beaucoup plus réactive que la plupart des autres protocoles de transport bidirectionnel basé sur le HTTP et que les techniques AJAX. Cet avantage est obtenu en évitant le polling HTTP qui consiste à envoyer des requêtes en permanence au serveur et qui entraîne de nombreuses réponses vides. Au contraire, BOSH simule une connexion TCP de longue durée en utilisant une séquence de requête/réponse HTTP, où la requête est mise en attente par le serveur jusqu'à ce que les données arrivent et soient renvoyées dans la réponse. Une fois la réponse reçue par le client, ce dernier renvoie immédiatement une nouvelle requête afin de continuer la boucle. XMPP utilise en grande majorité cette technologie, mais BOSH peut être utilisé à d'autres fins.
 
 ### B2. Solutions technologiques concurrentes
 
@@ -224,6 +240,17 @@ TODO : Étudier ces listes
 
 **PubSub :**
 - strophe (C or JavaScript)
+- XMPP4R (Ruby)
+
+**BOSH :**
+- emite (gwt)
+- gloox (C++)
+- JSJaC (JavaScript)
+- strophe (C or JavaScript)
+- Swiften (C++)
+- XIFF (Flash)
+- XMPP4GWT (gwt)
+- xmpp4js (JavaScript)
 - XMPP4R (Ruby)
 
 ### B3. Solutions retenues
