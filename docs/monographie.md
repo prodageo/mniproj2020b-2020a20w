@@ -58,16 +58,16 @@ L'objectif de ce projet est de déterminer la ou les techniques les plus adapté
 ### A2. Webographie
 
 * WebSockets :
-  + https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API
+  + [https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API](https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API)
   + Dernière consultation le 27/11/2020
   + Documentation complète sur la technologie des WebSockets et présentation d'outils permettant d'implémenter des WebSockets.
-* XMPP Overview : https://xmpp.org/about/technology-overview.html
+* XMPP Overview : [https://xmpp.org/about/technology-overview.html](https://xmpp.org/about/technology-overview.html)
 * What is PubSubHubbub and how does it work? :
-  + https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03
+  + [https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03](https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03)
   + Dernière consultation le 27/11/2020
   + Présentation du protocole PubSubHubbub et explication de son fonctionnement.
 * Reverse-Ajax :
-  + https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html
+  + [https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html](https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html)
   + Dernière consultation le 27/11/2020
   + Présentation d'Ajax, du Reverse Ajax (Comet) et des WebSockets. Explication des différentes techniques permettant de mettre en place le Reverse Ajax.
 
@@ -132,7 +132,7 @@ L'IETF a également contribué au développement de WebRTC. Leur livre blanc sur
 ### A7. Références théoriques
 
 **Ajax-Reverse** (IBM) :
-https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html
+[https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html](https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html)
 
 Ce concept a été introduit par Alex Russel et Joe Walker. Il s'agit d'un mode de fonctionnement où le serveur remonte de l'information au client (et non l'inverse), sans que celui-ci ne l'ait demandé explicitement. Il repose sur le mécanisme du long-polling : La requête HTTP peut rester en attente (d'un évenement, d'un timeout), dans quel cas elle se clot.
 
