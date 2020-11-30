@@ -269,6 +269,12 @@ TODO : Étudier ces listes
 - xmpp4js (JavaScript)
 - XMPP4R (Ruby)
 
+#### PubSubHubbub
+
+TODO : Étudier cette liste
+
+Voir les dépôts de [https://github.com/pubsubhubbub/](https://github.com/pubsubhubbub/)
+
 ### B3. Solutions retenues
 
 ### B4. Liste de métriques
