@@ -32,13 +32,16 @@ L'objectif de ce projet est de déterminer la ou les techniques les plus adapté
 *Le cas d'utilisation est le suivant :*
 
 ``` text
-> Un utilisateur maître M0 se connecte à l'application web A depuis un navigateur 1 et visualise une liste de tâches (vide).
+> Un utilisateur maître M0 se connecte à l'application web A depuis un navigateur 1
+    et visualise une liste de tâches (vide).
 > Il saisit 3 tâches T1, T2, T3.
 > L'utilisateur M démarre la conférence.
-> Deux utilisateurs observateurs O1 et O2 se connectent à l'application web A depuis les navigateurs 2 et 3.
+> Deux utilisateurs observateurs O1 et O2 se connectent à l'application web A
+    depuis les navigateurs 2 et 3.
 > Ils visualisent la liste des tâches.
 > L'utilisateur M surligne la tâche T1.
-> Les deux utilisateurs O1 et O2 voient la ligne surlignée sans qu'ils n'aient effectué aucune intervention.
+> Les deux utilisateurs O1 et O2 voient la ligne surlignée
+    sans qu'ils n'aient effectué aucune intervention.
 > O1 saisit un commentaire.
 > Les deux autres utilisateurs M0 et O2 voient le commentaire.
 ```
