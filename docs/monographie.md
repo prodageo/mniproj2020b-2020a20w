@@ -5,24 +5,25 @@ Consignes : http://prodageo.insa-rouen.fr/casimono/sujetprojmd/consignes.html
 
 ## Cartouche
 
- - Code du sujet : 20W 
- - Code de l'alliance : 2020A20W
- - Liste des équipes
-   - E03
-     - Boulier, Florent (FloBouboule)
-     - Lecordier, Jean (jlecordier)
-     - Picard, Lisa (lisapicard)
+- Code du sujet : 20W
+- Code de l'alliance : 2020A20W
+- Liste des équipes
+  - E03
+    - Boulier, Florent (FloBouboule)
+    - Lecordier, Jean (jlecordier)
+    - Picard, Lisa (lisapicard)
   
 ## Partie A
 
-### A0 : Introduction.
+### A0 : Introduction
 
 La technologie que nous allons étudier dans ce projet est celle du **web temps réel**. En effet, de nombreuses applications utilisent aujourd'hui cette technologie pour mettre à jour un écran sans qu'aucune interaction utilisateur ne l'ait demandé. Grâce à cette technologie, l'internaute n'est plus en attente d'information, il la reçoit lorsqu'elle est disponible. Cela permet notamment le travail collaboratif en temps réel et permet une meilleure interaction avec l'utilisateur.
 
 Les informations reçues par l'utilisateur peuvent être diverses : Des messages courts, des messages de type "alerte", des liens... On peut par exemple citer les statuts Facebook, les recherches Google ou les tweets.
 
 Il existe aujourd'hui plusieurs techniques pour implémenter du web en temps réel, comme les WebSockets de HTML5, XMPP ou encore PubSubHubbub. La plupart de ces techniques utilisent le pattern ajax-reverse, explicité dans la partie A7 réferences théoriques.
-- HTML5 est un standard des technologies web, qui apporte des API et des protocoles permettant d'implémenter le web temps réel. Les WebSockets sont un exemple de ces fonctionnalités : Ils permettent une communication bidirectionnelle entre le serveur et le client. 
+
+- HTML5 est un standard des technologies web, qui apporte des API et des protocoles permettant d'implémenter le web temps réel. Les WebSockets sont un exemple de ces fonctionnalités : Ils permettent une communication bidirectionnelle entre le serveur et le client.
 - XMPP est un ensemble de procotoles standards pour la messagerie instantanée.
 - PubSubHubbub est un protocole ouvert qui fournit une notification en temps réel des mises à jour.
 
@@ -30,7 +31,7 @@ L'objectif de ce projet est de déterminer la ou les techniques les plus adapté
 
 *Le cas d'utilisation est le suivant :*
 
-```
+``` text
 > Un utilisateur maître M0 se connecte à l'application web A depuis un navigateur 1 et visualise une liste de tâches (vide).
 > Il saisit 3 tâches T1, T2, T3.
 > L'utilisateur M démarre la conférence.
@@ -42,63 +43,63 @@ L'objectif de ce projet est de déterminer la ou les techniques les plus adapté
 > Les deux autres utilisateurs M0 et O2 voient le commentaire.
 ```
 
-### A1. Glossaire et Mots-clés.
+### A1. Glossaire et Mots-clés
 
-* **Application Web** : Une application hébérgée sur un serveur et accessible via un navigateur Web. Elle ne nécessite pas d'installation sur la machine cliente.
-* **Temps réel** : En direct, au moment où les choses se passent.
-* **Interaction utilisateur** : Action réciproque entre l'utilisateur et le système (ici une page web).
-* **Navigateur** : Logiciel conçu pour naviguer sur le Web.
-* **Rafraîchissement** : Fait d'actualiser/de recharger une page web pour avoir sa version la plus récente.
-* **Liste de tâches** : Outil de gestion de temps permettant de donner une priorité aux tâches à faire.
-* **ajax-reverse** : Pattern explicité en A7
-* **WebSockets** : voir A0
-* **XMPP** : voir A0
-* **PubSubHubbub** : voir A0
+- **Application Web** : Une application hébérgée sur un serveur et accessible via un navigateur Web. Elle ne nécessite pas d'installation sur la machine cliente.
+- **Temps réel** : En direct, au moment où les choses se passent.
+- **Interaction utilisateur** : Action réciproque entre l'utilisateur et le système (ici une page web).
+- **Navigateur** : Logiciel conçu pour naviguer sur le Web.
+- **Rafraîchissement** : Fait d'actualiser/de recharger une page web pour avoir sa version la plus récente.
+- **Liste de tâches** : Outil de gestion de temps permettant de donner une priorité aux tâches à faire.
+- **ajax-reverse** : Pattern explicité en A7
+- **WebSockets** : voir A0
+- **XMPP** : voir A0
+- **PubSubHubbub** : voir A0
 
 ### A2. Webographie
 
-* WebSockets :
-  + [https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API](https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API)
-  + Dernière consultation le 27/11/2020
-  + Documentation complète sur la technologie des WebSockets et présentation d'outils permettant d'implémenter des WebSockets.
-* XMPP Overview : [https://xmpp.org/about/technology-overview.html](https://xmpp.org/about/technology-overview.html)
-* What is PubSubHubbub and how does it work? :
-  + [https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03](https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03)
-  + Dernière consultation le 27/11/2020
-  + Présentation du protocole PubSubHubbub et explication de son fonctionnement.
-* Reverse-Ajax :
-  + [https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html](https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html)
-  + Dernière consultation le 27/11/2020
-  + Présentation d'Ajax, du Reverse Ajax (Comet) et des WebSockets. Explication des différentes techniques permettant de mettre en place le Reverse Ajax.
+- WebSockets :
+  - [https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API](https://developer.mozilla.org/fr/docs/Web/API/WebSockets_API)
+  - Dernière consultation le 27/11/2020
+  - Documentation complète sur la technologie des WebSockets et présentation d'outils permettant d'implémenter des WebSockets.
+- XMPP Overview : [https://xmpp.org/about/technology-overview.html](https://xmpp.org/about/technology-overview.html)
+- What is PubSubHubbub and how does it work? :
+  - [https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03](https://www.programmableweb.com/news/what-pubsubhubbub-push-styled-api-and-how-does-it-work/analysis/2017/04/03)
+  - Dernière consultation le 27/11/2020
+  - Présentation du protocole PubSubHubbub et explication de son fonctionnement.
+- Reverse-Ajax :
+  - [https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html](https://www.ibm.com/developerworks/library/wa-reverseajax1/index.html)
+  - Dernière consultation le 27/11/2020
+  - Présentation d'Ajax, du Reverse Ajax (Comet) et des WebSockets. Explication des différentes techniques permettant de mettre en place le Reverse Ajax.
 
 ### A3. Bibliographie
 
-* **Comet and Reverse Ajax**, Phil McCarthy, Dave Crane, 2009, Apress
-  + *What are Comet and Reverse Ajax?* (p.1-9) : Présentation de Comet et Reverse Ajax.
-  + *Simple Ways to achieve Push* (p.11-31) : Possibilité autres que Comet pour mettre en place Push.
-  + *Comet the Easy Way* (p.53-70) : Mettre en place simplement Comet avec des outils tels que Direct Web Remoting.
-* **Ajax Patterns and Best Practices**, Christian Gross, 2006, Apress
-  + Christian Gross est un ancien consultant pour Microsoft avec une très grande expérience sur les architectures client/serveur.
-  + *Persistent Communications Pattern* (p.225-263) : Explication du mécanisme permettant une communication bidirectionnelle.
-* **Ajax: The Complete Reference**, Thomas A. Powell, 2008, McGraw-Hill Osborne
-  + Thomas A. Powell est impliqué dans la communauté internet depuis 1987. En 1994, il crée son entreprise, spécialisée dans le Web design et Web development.
-  + *Networking considerations* (p.231-381) : Présentation de difficultés quant à l'utilisation d'Ajax et solutions possibles.
+- **Comet and Reverse Ajax**, Phil McCarthy, Dave Crane, 2009, Apress
+  - *What are Comet and Reverse Ajax?* (p.1-9) : Présentation de Comet et Reverse Ajax.
+  - *Simple Ways to achieve Push* (p.11-31) : Possibilité autres que Comet pour mettre en place Push.
+  - *Comet the Easy Way* (p.53-70) : Mettre en place simplement Comet avec des outils tels que Direct Web Remoting.
+- **Ajax Patterns and Best Practices**, Christian Gross, 2006, Apress
+  - Christian Gross est un ancien consultant pour Microsoft avec une très grande expérience sur les architectures client/serveur.
+  - *Persistent Communications Pattern* (p.225-263) : Explication du mécanisme permettant une communication bidirectionnelle.
+- **Ajax: The Complete Reference**, Thomas A. Powell, 2008, McGraw-Hill Osborne
+  - Thomas A. Powell est impliqué dans la communauté internet depuis 1987. En 1994, il crée son entreprise, spécialisée dans le Web design et Web development.
+  - *Networking considerations* (p.231-381) : Présentation de difficultés quant à l'utilisation d'Ajax et solutions possibles.
 
 ### A4. Acteurs
 
-* **Google** :
+**Google** :
 
 Google LLC est une entreprise américaine de services technologiques fondée en 1998 en Californie, par Larry Page et Sergey Brin. Les services qu'elle propose sont nombreux : courrier électronique, moteur de recherche, publicité en ligne, cloud, édition et collaboration (Google Docs, Sheets, Slides).
 
 En 2009, Google a annoncé le lancement d'une fonction de recherche en temps réel. Cette fonction sert à chercher les termes entrés par l'utilisateur sur les pages Twitter, Facebook et MySpace. Les résultats sont classés par pertinence (nombre d'amis s'il s'agit d'un compte Facebook, nombre de retweets pour Twitter).
 
-* **World Wide Web Consortium** :
+**World Wide Web Consortium** :
 
 Le World Wide Web Consortium, W3C, est un organisme de standardisation à but non lucratif, fondé en 1994. Il a pour objectif de promouvoir la compatibilité des technologies Web (HTML, XML, CSS, SVG...).
 
 Le W3C a contribué au développement en 2011 de WebRTC (Web Real-Time Communication), une interface de programmation JavaScript qui permet la communication en temps réel. Elle permet notamment le partage de fichiers en peer-to-peer.
 
-* **Internet Engineering Task Force** :
+**Internet Engineering Task Force** :
 
 L'Internet Engineering Task Force (IETF) est un organisme de normalisation à but non lucratif, fondé en 1986. L'objectif de cette organisation est d'élaborer et de promouvoir des standards internet.
 
@@ -108,26 +109,26 @@ L'IETF a également contribué au développement de WebRTC. Leur livre blanc sur
 
 ### A5. Facteurs qualité
 
-* Efficacité d'exécution : une application conçue pour fonctionner en temps réel doit bien évidemment avoir une efficacité d'exécution irréprochable. Dans le cas contraire, on perdrait l'aspect temps réel.
-* Indépendance machine : une technologie web doit être indépendante de l'environnement matériel car elle peut être utilisée dans plein d'environnements différents. L'environnement peut être différent à cause du système d'exploitation (ex : Windows/macOS), du navigateur (ex : Firefox/Opera), de l'appareil (ex : PC/Smartphone) et/ou de l'architecture (ex : x86_64/ARM64).
-* Efficacité de stockage : une efficacité de stockage dans une application web implique une efficacité dans les ressources envoyées et reçues par les serveurs et donc une économie de bande passante et une meilleure vitesse de chargement de l'application. On retrouve des aspects nécessaires à une application temps réel.
+- Efficacité d'exécution : une application conçue pour fonctionner en temps réel doit bien évidemment avoir une efficacité d'exécution irréprochable. Dans le cas contraire, on perdrait l'aspect temps réel.
+- Indépendance machine : une technologie web doit être indépendante de l'environnement matériel car elle peut être utilisée dans plein d'environnements différents. L'environnement peut être différent à cause du système d'exploitation (ex : Windows/macOS), du navigateur (ex : Firefox/Opera), de l'appareil (ex : PC/Smartphone) et/ou de l'architecture (ex : x86_64/ARM64).
+- Efficacité de stockage : une efficacité de stockage dans une application web implique une efficacité dans les ressources envoyées et reçues par les serveurs et donc une économie de bande passante et une meilleure vitesse de chargement de l'application. On retrouve des aspects nécessaires à une application temps réel.
 
 ### A6. Indicateurs qualité
 
 **Efficacité d'exécution** :
 
-* Indicateurs de base : fiabilité, facilité d'utilisation
-* Indicateur dérivé : efficacité
+- Indicateurs de base : fiabilité, facilité d'utilisation
+- Indicateur dérivé : efficacité
 
 **Indépendance machine** :
 
-* Indicateurs de base : portabilité, fiabilité
-* Indicateur dérivé : interopérabilité
+- Indicateurs de base : portabilité, fiabilité
+- Indicateur dérivé : interopérabilité
 
 **Efficacité de stockage** :
 
-* Indicateurs de base : rendement, fiabilité
-* Indicateur dérivé : exactitude
+- Indicateurs de base : rendement, fiabilité
+- Indicateur dérivé : exactitude
 
 ### A7. Références théoriques
 
@@ -153,11 +154,13 @@ Ce concept a été introduit par Alex Russel et Joe Walker. Il s'agit d'un mode 
 Le WebSocket est une technologie qui permet d'ouvrir un canal de communication bidirectionnelle entre un navigateur (côté client) et un serveur. Avec elle, il est possible d'envoyer des messages à un serveur et recevoir ses réponses de manière événementielle, sans avoir à consulter le serveur pour obtenir une réponse. Les connexions WebSockets sont similaires aux sockets Unix, mais ce sont bien deux entités distinctes. Il existe des connexions sécurisées `wss://` ou non `ws://`.
 
 Côté client, la technique est composée de 3 éléments :
+
 - Le WebSocket en lui-même, qui est l'interface principale pour se connecter à un serveur WebSocket. Il permet d'envoyer et de recevoir des données sur la connexion ;
 - Le CloseEvent qui est l'événement envoyé par l'objet WebSocket lors de la fermeture de la connexion ;
 - Le MessageEvent qui est l'événement envoyé par l'objet WebSocket lorsqu'un message en provenance du serveur est reçu.
 
 **WebSocket :** possède 3 méthodes :
+
 - une méthode permettant de créer la connexion ;
 - une méthode permettant d'envoyer des données sur la connexion ;
 - une méthode permettant de mettre fin à la connexion.
@@ -226,6 +229,7 @@ PubSubHubbub propose également un système de challenge, qui permet d'éviter l
 #### XMPP
 
 **Core :**
+
 - aioxmpp : Python
 - Erlang/Elixir XMPP : Elixir / Erlang
 - libstrophe : C
@@ -245,16 +249,19 @@ PubSubHubbub propose également un système de challenge, qui permet d'éviter l
 - Waher Networking : .NET Core / .NET Standard / C#
 
 **Jingle :**
+
 - libjingle (C/C++)
 - Smack (Java)
 - Telepathy Gabble (C)
 - yjingle (C++)
 
 **PubSub :**
+
 - strophe (C or JavaScript)
 - XMPP4R (Ruby)
 
 **BOSH :**
+
 - emite (gwt)
 - gloox (C++)
 - JSJaC (JavaScript)
