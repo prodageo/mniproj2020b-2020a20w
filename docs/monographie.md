@@ -208,8 +208,6 @@ PubSubHubbub propose également un système de challenge, qui permet d'éviter l
 
 #### WebSockets
 
-TODO : Étudier cette liste
-
 - HumbleNet: A cross-platform networking library that works in the browser. It consists of a C wrapper around WebSockets and WebRTC that abstracts away cross-browser differences, facilitating the creation of multi-user networking functionality for games and other apps.
 - µWebSockets: Highly scalable WebSocket server and client implementation for C++11 and Node.js.
 - ClusterWS: Lightweight, fast and powerful framework for building scalable WebSocket applications in Node.js.
@@ -226,8 +224,6 @@ TODO : Étudier cette liste
 - cowboy: Cowboy is a small, fast and modern HTTP server for Erlang/OTP with WebSocket support.
 
 #### XMPP
-
-TODO : Étudier ces listes
 
 **Core :**
 - aioxmpp : Python
@@ -271,15 +267,33 @@ TODO : Étudier ces listes
 
 #### PubSubHubbub
 
-TODO : Étudier cette liste
-
 Voir les dépôts de [https://github.com/pubsubhubbub/](https://github.com/pubsubhubbub/)
 
 ### B3. Solutions retenues
 
+ Comme nous sommes la seule équipe à travailler sur ce projet, nous avons retenu une seule solution qui est la suivante : utiliser des web sockets avec le framework de Node.js Socket.IO.
+ Node.js est une plateforme de développement Javascript. Il repose sur le langage Javascript avec des bibliothèques permettant de réaliser des actions comme écrire sur la sortie standard, ouvrir/fermer des connexions réseau ou encore créer un fichier.
+ Un WebSocket est une spécification d'un protocole permettant une communication bidirectionnelle et full duplex sur une seule socket TCP entre un client et un serveur. Le module socket.io de Node.js implémente des WebSockets par une approche évènementielle (avec les évènements suivants : emit, on et broadcast).
+
 ### B4. Liste de métriques
 
+Les métriques utilisées seront les suivantes :
+
+- le temps moyen entre l'envoie d'une requête et la réception de son accusé de réception. Elle pourra être mesurée de la manière suivante : lorsque le serveur envoie une requête, il lance un timer. Lorsque le client reçoit cette requête, il envoie un accusé de réception. Le serveur arrête le timer à la réception de l'accusé. Cette métrique permettra de mesurer le facteur d'efficacité d'exécution.
+- le nombre d'environnements différents sur lesquels il sera possible d'utiliser la solution. Pour la mesurer, on pourra essayer notre solution à l'aide des différents appareils que nous avons à notre disposition : smartphone, PC sous Linux, PC sous Windows, différents navigateurs web, raspberry Pi, etc. Cette métrique permettra de mesurer le facteur d'indépendance machine.
+- la quantité de données échangées sur une période de temps fixe. Il faudra garder en mémoire la taille de chaque requête envoyée et reçue afin de calculer cette métrique. Cette métrique permettra de mesurer le facteur d'efficacité de stockage.
+
 ### B5. Découpage (WBS) pour réalisation des prototypes
+
+Liste des tâches :
+- faire les spécifications et la conception du produit, pour le côté serveur comme le côté client
+- réfléchir/se renseigner sur comment et où installer un serveur node.js
+- se partager les tâches pour coder la solution
+- coder la solution
+- mettre en oeuvre les solutions qui permettront de mesurer les métriques mentionnées précédemment.
+- s'assurer que les facteurs qualités ont bien été respectés et sinon faire les modifications nécessaires pour que cela soit le cas
+- ??
+- profit
 
 ## Partie C
 
