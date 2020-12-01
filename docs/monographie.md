@@ -286,14 +286,14 @@ Les métriques utilisées seront les suivantes :
 ### B5. Découpage (WBS) pour réalisation des prototypes
 
 Liste des tâches :
+
 - faire les spécifications et la conception du produit, pour le côté serveur comme le côté client
 - réfléchir/se renseigner sur comment et où installer un serveur node.js
 - se partager les tâches pour coder la solution
 - coder la solution
-- mettre en oeuvre les solutions qui permettront de mesurer les métriques mentionnées précédemment.
+- mettre en oeuvre les solutions qui permettront de mesurer les métriques mentionnées précédemment
+- mesure les métriques
 - s'assurer que les facteurs qualités ont bien été respectés et sinon faire les modifications nécessaires pour que cela soit le cas
-- ??
-- profit
 
 ## Partie C
 
