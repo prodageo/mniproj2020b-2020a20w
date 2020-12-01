@@ -271,29 +271,21 @@ Voir les dépôts de [https://github.com/pubsubhubbub/](https://github.com/pubsu
 
 ### B3. Solutions retenues
 
- Comme nous sommes la seule équipe à travailler sur ce projet, nous avons retenu une seule solution qui est la suivante : utiliser des web sockets avec le framework de Node.js Socket.IO.
- Node.js est une plateforme de développement Javascript. Il repose sur le langage Javascript avec des bibliothèques permettant de réaliser des actions comme écrire sur la sortie standard, ouvrir/fermer des connexions réseau ou encore créer un fichier.
- Un WebSocket est une spécification d'un protocole permettant une communication bidirectionnelle et full duplex sur une seule socket TCP entre un client et un serveur. Le module socket.io de Node.js implémente des WebSockets par une approche évènementielle (avec les évènements suivants : emit, on et broadcast).
+Comme nous sommes la seule équipe à travailler sur ce projet, nous avons retenu une seule solution qui est la suivante : utiliser des web sockets avec le framework Socket.IO de Node.js.
+Node.js est une plateforme de développement JavaScript. Elle repose sur le langage JavaScript avec des bibliothèques permettant de réaliser des actions comme écrire sur la sortie standard, ouvrir/fermer des connexions réseau ou encore créer un fichier.
+Un WebSocket est une spécification d'un protocole permettant une communication bidirectionnelle et full duplex sur une seule socket TCP entre un client et un serveur. Le module Socket.IO de Node.js implémente des WebSockets par une approche événementielle (avec les événements suivants : emit, on et broadcast).
 
 ### B4. Liste de métriques
 
 Les métriques utilisées seront les suivantes :
 
-- le temps moyen entre l'envoie d'une requête et la réception de son accusé de réception. Elle pourra être mesurée de la manière suivante : lorsque le serveur envoie une requête, il lance un timer. Lorsque le client reçoit cette requête, il envoie un accusé de réception. Le serveur arrête le timer à la réception de l'accusé. Cette métrique permettra de mesurer le facteur d'efficacité d'exécution.
-- le nombre d'environnements différents sur lesquels il sera possible d'utiliser la solution. Pour la mesurer, on pourra essayer notre solution à l'aide des différents appareils que nous avons à notre disposition : smartphone, PC sous Linux, PC sous Windows, différents navigateurs web, raspberry Pi, etc. Cette métrique permettra de mesurer le facteur d'indépendance machine.
+- le temps moyen entre l'envoi d'une requête et la réception de son accusé de réception. Elle pourra être mesurée de la manière suivante : lorsque le serveur envoie une requête, il lance un timer. Lorsque le client reçoit cette requête, il envoie un accusé de réception. Le serveur arrête le timer à la réception de l'accusé. Cette métrique permettra de mesurer le facteur d'efficacité d'exécution.
+- le nombre d'environnements différents sur lesquels il sera possible d'utiliser la solution. Pour la mesurer, on pourra essayer notre solution à l'aide des différents appareils que nous avons à notre disposition : smartphone, PC sous Linux, PC sous Windows, différents navigateurs web, Raspberry Pi, etc. Cette métrique permettra de mesurer le facteur d'indépendance machine.
 - la quantité de données échangées sur une période de temps fixe. Il faudra garder en mémoire la taille de chaque requête envoyée et reçue afin de calculer cette métrique. Cette métrique permettra de mesurer le facteur d'efficacité de stockage.
 
 ### B5. Découpage (WBS) pour réalisation des prototypes
 
-Liste des tâches :
-
-- faire les spécifications et la conception du produit, pour le côté serveur comme le côté client
-- réfléchir/se renseigner sur comment et où installer un serveur node.js
-- se partager les tâches pour coder la solution
-- coder la solution
-- mettre en oeuvre les solutions qui permettront de mesurer les métriques mentionnées précédemment
-- mesure les métriques
-- s'assurer que les facteurs qualités ont bien été respectés et sinon faire les modifications nécessaires pour que cela soit le cas
+![WBS](wbs.png)
 
 ## Partie C
 

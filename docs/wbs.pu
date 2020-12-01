@@ -1,0 +1,20 @@
+@startwbs
+
+* Monographie - Web temps réel
+** Spécifications
+*** Serveur
+*** Client
+** Conception
+*** Serveur
+*** Client
+** Développement
+*** Se partager les tâches
+*** Serveur
+*** Client
+** Métriques
+*** Mettre en œuvre les solutions qui \n permettent de mesurer les métriques
+*** Mesurer les métriques
+*** S'assurer que les facteurs \n qualités ont bien été respectés
+*** Faire les modifications nécessaires \n si les facteurs ne le sont pas
+
+@endwbs
