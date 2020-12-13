@@ -112,9 +112,9 @@ L'IETF a également contribué au développement de WebRTC. Leur livre blanc sur
 
 ### A5. Facteurs qualité
 
-- Efficacité d'exécution : une application conçue pour fonctionner en temps réel doit bien évidemment avoir une efficacité d'exécution irréprochable. Dans le cas contraire, on perdrait l'aspect temps réel.
-- Indépendance machine : une technologie web doit être indépendante de l'environnement matériel car elle peut être utilisée dans plein d'environnements différents. L'environnement peut être différent à cause du système d'exploitation (ex : Windows/macOS), du navigateur (ex : Firefox/Opera), de l'appareil (ex : PC/Smartphone) et/ou de l'architecture (ex : x86_64/ARM64).
-- Efficacité de stockage : une efficacité de stockage dans une application web implique une efficacité dans les ressources envoyées et reçues par les serveurs et donc une économie de bande passante et une meilleure vitesse de chargement de l'application. On retrouve des aspects nécessaires à une application temps réel.
+- **Efficacité d'exécution :** une application conçue pour fonctionner en temps réel doit bien évidemment avoir une efficacité d'exécution irréprochable. Dans le cas contraire, on perdrait l'aspect temps réel.
+- **Indépendance machine :** une technologie web doit être indépendante de l'environnement matériel car elle peut être utilisée dans plein d'environnements différents. L'environnement peut être différent à cause du système d'exploitation (ex : Windows/macOS), du navigateur (ex : Firefox/Opera), de l'appareil (ex : PC/Smartphone) et/ou de l'architecture (ex : x86_64/ARM64).
+- **Efficacité de stockage :** une efficacité de stockage dans une application web implique une efficacité dans les ressources envoyées et reçues par les serveurs et donc une économie de bande passante et une meilleure vitesse de chargement de l'application. On retrouve des aspects nécessaires à une application temps réel.
 
 ### A6. Indicateurs qualité
 
@@ -199,8 +199,8 @@ XMPP est un ensemble de technologies pour la messagerie instantanée, entres aut
 PubSubHubbub est une technologie permettant d'envoyer de l'information au client, sans que celui-ci envoie une requête la demandant. Pour ce faire, le système est composé de 3 éléments : un publicateur, un abonné, et un hub.
 
 - Le **publicateur** est l'entité qui possède l'information, et qui la transmet.
-- L'**abonné** est l'entité interessée par l'information du publicateur.
-- Le **hub** est l'entité qui récupère les informations proposées par les publicateurs, et qui se charge de les redistribuer aux abonnés interessés.
+- L'**abonné** est l'entité intéressée par l'information du publicateur.
+- Le **hub** est l'entité qui récupère les informations proposées par les publicateurs, et qui se charge de les redistribuer aux abonnés intéressés.
 
 Afin de gérer les différentes informations, PubSubHubbub fonctionne grâce à un système de topics.
 Chaque publicateur propose une liste de topics concernant les différentes informations qu'il met à disposition.
@@ -281,7 +281,7 @@ Voir les dépôts de [https://github.com/pubsubhubbub/](https://github.com/pubsu
 
 ### B3. Solutions retenues
 
-Comme nous sommes la seule équipe à travailler sur ce projet, nous avons retenu une seule solution qui est la suivante : utiliser des web sockets avec le framework Socket.IO de Node.js.
+Comme nous sommes la seule équipe à travailler sur ce projet, nous avons retenu une seule solution qui est la suivante : utiliser des web sockets avec le **framework Socket.IO** de **Node.js**.
 Node.js est une plateforme de développement JavaScript. Elle repose sur le langage JavaScript avec des bibliothèques permettant de réaliser des actions comme écrire sur la sortie standard, ouvrir/fermer des connexions réseau ou encore créer un fichier.
 Un WebSocket est une spécification d'un protocole permettant une communication bidirectionnelle et full duplex sur une seule socket TCP entre un client et un serveur. Le module Socket.IO de Node.js implémente des WebSockets par une approche événementielle (avec les événements suivants : emit, on et broadcast).
 
@@ -289,9 +289,9 @@ Un WebSocket est une spécification d'un protocole permettant une communication 
 
 Les métriques utilisées seront les suivantes :
 
-- le temps moyen entre l'envoi d'une requête et la réception de son accusé de réception. Elle pourra être mesurée de la manière suivante : lorsque le serveur envoie une requête, il lance un timer. Lorsque le client reçoit cette requête, il envoie un accusé de réception. Le serveur arrête le timer à la réception de l'accusé. Cette métrique permettra de mesurer le facteur d'efficacité d'exécution.
-- le nombre d'environnements différents sur lesquels il sera possible d'utiliser la solution. Pour la mesurer, on pourra essayer notre solution à l'aide des différents appareils que nous avons à notre disposition : smartphone, PC sous Linux, PC sous Windows, différents navigateurs web, Raspberry Pi, etc. Cette métrique permettra de mesurer le facteur d'indépendance machine.
-- la quantité de données échangées sur une période de temps fixe. Il faudra garder en mémoire la taille de chaque requête envoyée et reçue afin de calculer cette métrique. Cette métrique permettra de mesurer le facteur d'efficacité de stockage.
+- le temps moyen entre l'envoi d'une requête et la réception de son accusé de réception. Elle pourra être mesurée de la manière suivante : lorsque le serveur envoie une requête, il lance un timer. Lorsque le client reçoit cette requête, il envoie un accusé de réception. Le serveur arrête le timer à la réception de l'accusé. Cette métrique permettra de mesurer le facteur d'**efficacité d'exécution**.
+- le nombre d'environnements différents sur lesquels il sera possible d'utiliser la solution. Pour la mesurer, on pourra essayer notre solution à l'aide des différents appareils que nous avons à notre disposition : smartphone, PC sous Linux, PC sous Windows, différents navigateurs web, Raspberry Pi, etc. Cette métrique permettra de mesurer le facteur d'**indépendance machine**.
+- la quantité de données échangées sur une période de temps fixe. Il faudra garder en mémoire la taille de chaque requête envoyée et reçue afin de calculer cette métrique. Cette métrique permettra de mesurer le facteur d'**efficacité de stockage**.
 
 ### B5. Découpage (WBS) pour réalisation des prototypes
 
@@ -301,8 +301,13 @@ Les métriques utilisées seront les suivantes :
 
 ### C1. Architecture solution W
 
-### C2. Architecture solution X
 
-### C3. Architecture solution Y
+Comme l'alliance était composée seulement de notre équipe, l'équipe E03, nous travaillerons sur la solution W : le framework Socket.IO de Node.js.
 
-### C4. Architecture solution Z
+**Sources :**
+
+- [Tutorial Deployment Diagram](https://www.sparxsystems.fr/resources/uml2_tutorial/uml2_deploymentdiagram.html)
+- [Wikipedia](https://fr.wikipedia.org/wiki/Diagramme_de_d%C3%A9ploiement)
+- [Cours de WOS - ASI5](https://moodle.insa-rouen.fr/course/view.php?id=1216)
+
+![Diagramme de deploiement](diagramme_deploiement.png)
