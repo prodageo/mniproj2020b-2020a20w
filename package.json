@@ -1,12 +1,13 @@
 {
   "name": "web-temps-reel",
   "version": "1.0.0",
-  "description": "## Fichiers du squelette Fichiers fournis dans la matrice (par ordre d'importance descendante)  - docs/monographie.md : le squelette de la monographie  - docs/\\_config.yml : ce fichier de propriétés sera utilisé quand vous publierez votre monographie sous _github-pages_.  - docs/miniproj.tpl : ce fichier est une astuce pour publier votre monographie avec une table des matières",
+  "description": "Web temps-réel",
   "main": "serveur/server.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "start": "node serveur/server.js",
     "test": "nodemon serveur/server.js"
   },
   "repository": {
