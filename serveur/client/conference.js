@@ -1,8 +1,6 @@
 "use strict";
 
 const socket = io();
-const data = "data";
-socket.emit("event-name", data);
 
 const stringToId = function (text) {
     return text.replace(" ", "");
@@ -13,14 +11,6 @@ messageInput.addEventListener("keydown", event => {
     if (event.key === "Enter") {
         socket.emit("message", messageInput.value);
         messageInput.value = "";
-    }
-});
-
-const tacheInput = document.getElementById("tache");
-tacheInput.addEventListener("keydown", event => {
-    if (event.key === "Enter") {
-        socket.emit("tache", tacheInput.value);
-        tacheInput.value = "";
     }
 });
 
@@ -35,8 +25,6 @@ socket.on("message", ajoutMessage);
 socket.on("messages", messages => messages.forEach(ajoutMessage));
 
 function tacheSelectionnee(event) {
-    console.log("ci dessous, l'id");
-    console.log(event.target.id);
     socket.emit("tache-selectionnee", event.target.id);
 }
 
