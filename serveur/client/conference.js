@@ -6,10 +6,13 @@ const stringToId = function (text) {
     return text.replace(" ", "");
 };
 
+var messageSent = "";
+
 const messageInput = document.getElementById("message");
 messageInput.addEventListener("keydown", event => {
     if (event.key === "Enter") {
         socket.emit("message", messageInput.value);
+        messageSent = messageInput.value;
         messageInput.value = "";
     }
 });
@@ -21,7 +24,15 @@ const ajoutMessage = function (message) {
     listeMessages.appendChild(li);
 };
 
-socket.on("message", ajoutMessage);
+// socket.on("message", ajoutMessage);
+socket.on("message", message => {
+    ajoutMessage(message);
+    if (message != messageSent) {
+        socket.emit("accuse");
+    } else {
+        messageSent = "";
+    }
+})
 socket.on("messages", messages => messages.forEach(ajoutMessage));
 
 function tacheSelectionnee(event) {
